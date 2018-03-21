@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body bgcolor="Tomato">
+<center><h1>links for the <%= jvalue%> </h1></center><br><br>
+<% jdata.forEach(function(value) { %>
+<a href = <%= value.html_url %> >links </a><br><br>
+<% }) %>
+</body>
+</html>
