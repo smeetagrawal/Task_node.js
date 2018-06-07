@@ -49,7 +49,8 @@ var options2 ={
 {
   var j = JSON.parse(body).items;
 console.log(j);
-res.render('new1',{jdata:j,jvalue:mom});
+//res.send(j);
+res.render('new1',{jdata:j,jvalue:mom,fun:app});
 
 });
 
@@ -57,11 +58,11 @@ res.render('new1',{jdata:j,jvalue:mom});
 console.log(mom);
 });
 
-app.get('/newpath',function(req,res)
-{
-  res.send("hello");
-
+app.get('/temp',function(req,res) {
+   var t = JSON.parse(req.query.name);
+  res.render('repo_information',{temp:t});
 });
+
 
 
 
